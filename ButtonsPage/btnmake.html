@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Button Maker</title>
+        <link rel ="stylesheet" href ="btnmake.css">
+    </head>
+    <style>
+        .mybutton {
+            border-radius: 25px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .mybutton:hover {
+            background-color: #45a049;
+        }
+        .btn1 {
+            background-color: blue;
+            color: white;
+            padding: 15px 32px;
+            margin : auto;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+        .btn1:hover {
+            background-color: darkblue;
+        }
+    </style>
+    <body>
+        <button class = "mybutton" onclick = "Show()">Button 1</button>
+        <button class = "mybutton" onclick = "alert('Button clicked!')">Button 2</button>
+        <button class = "mybutton" onclick = "alert('Button clicked!')">Button 3</button>
+        <button class = "mybutton" onclick = "alert('Button clicked!')">Button 4</button>
+    </body>
+    <body>
+        <button class = "btn1" id="tb" onclick = "togglebtn()">Show text</button>
+        <p id = "text" style = "display:none;">Hello Man pls hit me again for hide the text</p>
+    </body>
+
+    <script>
+        function Show() {
+            alert("Button clicked!");
+        }
+        function togglebtn(){
+            const btn = document.getElementById("tb");
+            const text = document.getElementById("text");
+            if(text.style.display === "none"){
+                text.style.display = "block";
+                btn.textContent = "Hide text";
+            }else{
+                text.style.display = "none";
+                btn.textContent = "Show text"
+            }
+        }
+    </script>
+
+</html>
